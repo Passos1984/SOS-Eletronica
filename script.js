@@ -1,4 +1,4 @@
-const WHATSAPP_NUMERO = '5551999999999';
+const WHATSAPP_NUMERO = '5551981962819';
 
 const options = document.querySelectorAll('.card-option, .radio-option');
 
