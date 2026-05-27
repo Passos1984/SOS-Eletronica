@@ -1,0 +1,175 @@
+:root{
+  --bg:#0f172a;
+  --card:#1e293b;
+  --primary:#00c2ff;
+  --secondary:#38bdf8;
+  --text:#ffffff;
+  --muted:#cbd5e1;
+  --success:#25d366;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI,sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#020617,#0f172a);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  color:var(--text);
+}
+
+.container{
+  width:100%;
+  max-width:650px;
+  background:rgba(15,23,42,.95);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.header{
+  text-align:center;
+  padding:30px 20px;
+  background:linear-gradient(135deg,#0284c7,#0ea5e9);
+}
+
+.header h1{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.banner{
+  padding:20px;
+  text-align:center;
+}
+
+.banner h2{
+  margin-bottom:10px;
+}
+
+.banner p{
+  color:var(--muted);
+}
+
+form{
+  padding:25px;
+}
+
+.form-group{
+  margin-bottom:20px;
+}
+
+label{
+  display:block;
+  margin-bottom:10px;
+  font-weight:600;
+}
+
+input, textarea{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:#1e293b;
+  color:white;
+  font-size:15px;
+}
+
+textarea{
+  resize:none;
+}
+
+.cards-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.card-option{
+  background:#1e293b;
+  border:2px solid transparent;
+  padding:18px;
+  border-radius:16px;
+  text-align:center;
+  cursor:pointer;
+  transition:.3s;
+  font-weight:600;
+}
+
+.card-option:hover{
+  border-color:var(--primary);
+  transform:translateY(-3px);
+}
+
+.card-option input{
+  display:none;
+}
+
+.card-option.selected{
+  border-color:var(--primary);
+  background:#082f49;
+}
+
+.radio-group{
+  display:flex;
+  gap:15px;
+}
+
+.radio-option{
+  flex:1;
+  background:#1e293b;
+  padding:14px;
+  border-radius:12px;
+  text-align:center;
+  cursor:pointer;
+  border:2px solid transparent;
+}
+
+.radio-option input{
+  display:none;
+}
+
+.radio-option.selected{
+  border-color:var(--secondary);
+}
+
+button{
+  width:100%;
+  border:none;
+  padding:18px;
+  border-radius:14px;
+  background:var(--success);
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  transform:scale(1.02);
+}
+
+.hidden{
+  display:none;
+}
+
+@media(max-width:600px){
+
+  .cards-grid{
+    grid-template-columns:1fr;
+  }
+
+  .radio-group{
+    flex-direction:column;
+  }
+
+}

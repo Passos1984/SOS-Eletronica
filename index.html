@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOS Eletrônica - Orçamento Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <header class="header">
+    <h1>🔧 SOS Eletrônica</h1>
+    <p>Receba orçamentos organizados diretamente no WhatsApp.</p>
+  </header>
+
+  <div class="banner">
+    <h2>Assistência Técnica Premium</h2>
+    <p>TV • Notebook • Celular • Videogame • Som • Informática</p>
+  </div>
+
+  <form id="orcamentoForm">
+
+    <div class="form-group">
+      <label>Tipo de equipamento</label>
+
+      <div class="cards-grid">
+
+        <label class="card-option">
+          <input type="radio" name="equipamento" value="Notebook" required>
+          💻 Notebook
+        </label>
+
+        <label class="card-option">
+          <input type="radio" name="equipamento" value="Celular">
+          📱 Celular
+        </label>
+
+        <label class="card-option">
+          <input type="radio" name="equipamento" value="TV">
+          📺 TV
+        </label>
+
+        <label class="card-option">
+          <input type="radio" name="equipamento" value="Videogame">
+          🎮 Videogame
+        </label>
+
+        <label class="card-option">
+          <input type="radio" name="equipamento" value="Som Automotivo">
+          🔊 Som
+        </label>
+
+        <label class="card-option">
+          <input type="radio" name="equipamento" value="Outro">
+          🛠️ Outro
+        </label>
+
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Marca do equipamento</label>
+      <input type="text" id="marca" placeholder="Ex: Samsung">
+    </div>
+
+    <div class="form-group">
+      <label>Modelo</label>
+      <input type="text" id="modelo" placeholder="Ex: Galaxy S22">
+    </div>
+
+    <div class="form-group">
+      <label>Qual o problema?</label>
+      <textarea id="problema" rows="4" placeholder="Explique o defeito do aparelho..." required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>O equipamento liga?</label>
+
+      <div class="radio-group">
+        <label class="radio-option">
+          <input type="radio" name="liga" value="Sim" required>
+          Sim
+        </label>
+
+        <label class="radio-option">
+          <input type="radio" name="liga" value="Não">
+          Não
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Como deseja o atendimento?</label>
+
+      <div class="cards-grid">
+
+        <label class="card-option atendimento">
+          <input type="radio" name="atendimento" value="Cliente vai levar até a loja" required>
+          🏪 Levar até a loja
+        </label>
+
+        <label class="card-option atendimento">
+          <input type="radio" name="atendimento" value="Técnico vai até o local">
+          🚗 Técnico no local
+        </label>
+
+      </div>
+
+    </div>
+
+    <div id="enderecoBox" class="hidden">
+
+      <div class="form-group">
+        <label>Endereço</label>
+        <input type="text" id="endereco" placeholder="Rua e número">
+      </div>
+
+      <div class="form-group">
+        <label>Bairro / Cidade</label>
+        <input type="text" id="bairro" placeholder="Seu bairro">
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label>Nome</label>
+      <input type="text" id="nome" required>
+    </div>
+
+    <div class="form-group">
+      <label>WhatsApp</label>
+      <input type="tel" id="telefone" required>
+    </div>
+
+    <button type="submit">
+      Solicitar orçamento no WhatsApp
+    </button>
+
+  </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
